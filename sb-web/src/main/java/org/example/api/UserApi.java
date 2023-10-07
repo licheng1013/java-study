@@ -26,4 +26,10 @@ public class UserApi {
         user.setAge(20);
         return Result.ok(user);
     }
+
+    // 错误示例
+    @RequestMapping("/error")
+    public Object error(){
+        return Result.error("错误示例");
+    }
 }
