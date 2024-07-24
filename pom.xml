@@ -13,6 +13,7 @@
         <module>design-patterns</module>
         <module>algo</module>
         <module>sb-web</module>
+        <module>kt-sb-web</module>
     </modules>
 
     <properties>
