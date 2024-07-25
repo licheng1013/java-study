@@ -14,7 +14,7 @@ public class Result<T>{
 
     public static Result<Object> error(String msg){
         Result<Object> result = new Result<>();
-        result.code = 1;
+        result.code = -1;
         result.msg = msg;
         return result;
     }

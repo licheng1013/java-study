@@ -13,6 +13,6 @@ class GlobalExceptionHandler : ResponseEntityExceptionHandler() {
     @ResponseBody
     fun handleException(e: Exception): Result<Any> {
         // 在这里处理异常，返回统一格式的错误响应
-        return Result(-1, e.message ?: "未知异常")
+        return Result.fail(e.message ?: "未知异常")
     }
 }

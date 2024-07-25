@@ -28,6 +28,6 @@ class ApiResponseAdvice : ResponseBodyAdvice<Any> {
             return body
         }
         // 否则，将原始响应包装在ApiResponse中
-        return Result(data = body)
+        return Result.ok(body)
     }
 }

@@ -16,7 +16,7 @@ public class UserApi {
     public Object list(User user){
         user.setName("LIST");
         user.setAge(101);
-        return Result.ok(user);
+        return user;
     }
 
     @RequestMapping("/insert")
@@ -24,12 +24,12 @@ public class UserApi {
         user.setToken(request.getHeader("Token"));
         user.setName("测试");
         user.setAge(20);
-        return Result.ok(user);
+        return user;
     }
 
     // 错误示例
     @RequestMapping("/error")
     public Object error(){
-        return Result.error("错误示例");
+        throw new RuntimeException("Hello error");
     }
 }
