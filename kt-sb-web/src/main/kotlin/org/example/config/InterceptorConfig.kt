@@ -32,7 +32,8 @@ open class InterceptorConfig : HandlerInterceptor {
         val executeTime = endTime - startTime
         val formattedExecuteTime = String.format("%10d", executeTime)
         val method = request.method
+        val methodWithColor = String.format("%5s", "\u001B[34m$method\u001B[0m") // Blue text color
         val urlPat = request.requestURI
-        log.info("${formattedExecuteTime}ms $method \"$urlPat\"")
+        log.info("${formattedExecuteTime}ms $methodWithColor \"$urlPat\"")
     }
 }
