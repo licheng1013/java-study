@@ -14,6 +14,7 @@
         <module>algo</module>
         <module>sb-web</module>
         <module>kt-sb-web</module>
+        <module>study</module>
     </modules>
 
     <properties>
