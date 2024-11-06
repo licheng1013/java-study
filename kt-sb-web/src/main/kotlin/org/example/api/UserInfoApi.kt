@@ -4,8 +4,9 @@ import org.example.model.UserInfo
 import org.example.service.UserInfoService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/user/info")
@@ -15,9 +16,15 @@ class UserInfoApi {
     lateinit var userInfoService: UserInfoService
 
     @GetMapping("/list")
-    fun list() = userInfoService.list()
+    fun list(): List<UserInfo> = userInfoService.list()
 
-    @RequestMapping("/update")
-    fun update(user: UserInfo) = user
+    @PostMapping("/update")
+    fun update(user: UserInfo) = userInfoService.updateById(user)
+
+    @PostMapping("/delete")
+    fun delete(id: Int) = userInfoService.removeById(id)
+
+    @PostMapping("/insert")
+    fun insert(user: UserInfo) = userInfoService.save(user)
 
 }
