@@ -1,4 +1,4 @@
-package org.example.model
+package org.example.entity
 
 class Result<T>(
     var code: Int = 0,

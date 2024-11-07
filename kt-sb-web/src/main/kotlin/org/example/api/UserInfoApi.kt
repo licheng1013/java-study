@@ -1,6 +1,6 @@
 package org.example.api
 
-import org.example.model.UserInfo
+import org.example.entity.UserInfo
 import org.example.service.UserInfoService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping

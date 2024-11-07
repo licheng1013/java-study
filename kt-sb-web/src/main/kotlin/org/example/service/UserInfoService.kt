@@ -1,6 +1,6 @@
 package org.example.service
 
 import com.baomidou.mybatisplus.extension.service.IService
-import org.example.model.UserInfo
+import org.example.entity.UserInfo
 
 interface UserInfoService : IService<UserInfo>

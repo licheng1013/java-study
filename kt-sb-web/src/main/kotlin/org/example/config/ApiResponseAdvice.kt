@@ -1,6 +1,6 @@
 package org.example.config
 
-import org.example.model.Result
+import org.example.entity.Result
 import org.springframework.core.MethodParameter
 import org.springframework.http.MediaType
 import org.springframework.http.converter.HttpMessageConverter

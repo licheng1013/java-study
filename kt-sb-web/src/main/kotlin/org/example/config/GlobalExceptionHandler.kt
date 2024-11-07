@@ -1,6 +1,6 @@
 package org.example.config
 
-import org.example.model.Result
+import org.example.entity.Result
 import org.springframework.web.bind.annotation.ControllerAdvice
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.ResponseBody
