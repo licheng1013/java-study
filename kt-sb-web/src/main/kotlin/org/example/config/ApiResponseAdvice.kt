@@ -1,6 +1,6 @@
 package org.example.config
 
-import org.example.model.Result
+import org.example.model.ResultInfo
 import org.springframework.core.MethodParameter
 import org.springframework.http.MediaType
 import org.springframework.http.converter.HttpMessageConverter
@@ -24,10 +24,10 @@ class ApiResponseAdvice : ResponseBodyAdvice<Any> {
         request: ServerHttpRequest,
         response: ServerHttpResponse
     ): Any? {
-        if (body is Result<*>) {
+        if (body is ResultInfo<*>) {
             return body
         }
         // 否则，将原始响应包装在ApiResponse中
-        return Result.ok(body)
+        return ResultInfo.ok(body)
     }
 }
