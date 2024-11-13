@@ -2,6 +2,7 @@ package org.example.api
 
 import org.example.entity.UserInfo
 import org.example.service.UserInfoService
+import org.example.util.MyException
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
@@ -26,5 +27,8 @@ class UserInfoApi {
 
     @PostMapping("/insert")
     fun insert(user: UserInfo) = userInfoService.save(user)
+
+    @GetMapping("/error")
+    fun error(): Nothing = throw MyException("error")
 
 }
